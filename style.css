@@ -1,7 +1,12 @@
-h1{
-    color: aqua;
+/* Variable de couleurs */
+:root{
+    --bleu : #0065FC;
+    --bleuClair : #DEEBFF;
+    --grisFond : #F2F2F2;
+
+    /*!*Pour les couleurs*!*/
+    /*color: var(--bleu);*/
 }
 p{
-    color: red;
-  
+
 }
