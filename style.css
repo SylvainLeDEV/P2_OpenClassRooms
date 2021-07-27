@@ -14,3 +14,22 @@ font-family: 'Raleway', sans-serif;
     /*color: var(--bleu);*/
 }
 
+/*------------ HEADER ---------------*/
+
+.logo_reservia{
+    height: 50px;
+    width: 100px;
+}
+
+navbar{
+    display: flex;
+
+}
+
+ul{
+    display: flex;
+}
+
+h2{
+
+}
