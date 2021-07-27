@@ -1,0 +1,46 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Reservia</title>\r\n    <link rel=\"stylesheet\" href=\"style.css\">\r\n</head>\r\n<body>\r\n\r\n<h1>Une maginifique titre</h1>\r\n\r\n<p>J'ai fait une modification ! :D</p>\r\n\r\n<div id=\"navBar\">\r\n    <p>Je vais faire la navBar ici je test Git pour le moment !!!</p>\r\n</div>\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 2b5350de1c5d07b1f6bf2c09a343120f78c1c147)
++++ b/index.html	(date 1627381551191)
+@@ -7,13 +7,7 @@
+ </head>
+ <body>
+ 
+-<h1>Une maginifique titre</h1>
+ 
+-<p>J'ai fait une modification ! :D</p>
+-
+-<div id="navBar">
+-    <p>Je vais faire la navBar ici je test Git pour le moment !!!</p>
+-</div>
+ 
+ </body>
+ </html>
+\ No newline at end of file
+Index: style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>h1{\r\n    color: aqua;\r\n}\r\np{\r\n    color: red;\r\n}\r\n#navBar{\r\n    size: 10px;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/style.css b/style.css
+--- a/style.css	(revision 2b5350de1c5d07b1f6bf2c09a343120f78c1c147)
++++ b/style.css	(date 1627381551195)
+@@ -1,9 +1,0 @@
+-h1{
+-    color: aqua;
+-}
+-p{
+-    color: red;
+-}
+-#navBar{
+-    size: 10px;
+-}
+\ No newline at end of file
