@@ -1,9 +1,18 @@
-h1{
-    color: aqua;
+/*--------- Police d'écriture ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/*
+font-family: 'Raleway', sans-serif;
+*/
+
+/*---------- Variable de couleurs ------*/
+:root{
+    --bleu : #0065FC;
+    --bleuClair : #DEEBFF;
+    --grisFond : #F2F2F2;
+
+    /*!*Pour les couleurs*!*/
+    /*color: var(--bleu);*/
 }
 p{
-    color: red;
-}
-#navBar{
-    size: 10px;
+
 }
