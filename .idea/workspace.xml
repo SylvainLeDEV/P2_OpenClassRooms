@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9d8978f-0d44-40eb-8dfe-348c97f8a419" name="Default Changelist" comment="Mise en forme du fichier HTML + variable couleur et police d'ecriture mis sur CSS" />
+    <list default="true" id="a9d8978f-0d44-40eb-8dfe-348c97f8a419" name="Default Changelist" comment="Mise en forme du fichier HTML + variable couleur et police d'ecriture mis sur CSS">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +76,7 @@
       <workItem from="1627312152611" duration="3783000" />
       <workItem from="1627369637959" duration="5877000" />
       <workItem from="1627381428589" duration="835000" />
-      <workItem from="1627382293979" duration="385000" />
+      <workItem from="1627382293979" duration="1894000" />
     </task>
     <task id="LOCAL-00001" summary="je peux commit directement de par phpstorm">
       <created>1627301510682</created>
@@ -111,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627381849330</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Mise en forme du fichier HTML + variable couleur et police d'ecriture mis sur CSS">
+      <created>1627388211218</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1627388211218</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
