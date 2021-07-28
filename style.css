@@ -1,7 +1,9 @@
 /*--------- Police d'écriture ----------*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ralewaybold:wght@600&display=swap');
 /*
 font-family: 'Raleway', sans-serif;
+font-family: 'Ralewaybold', sans-serif;
 */
 
 /*---------- Variable de couleurs ------*/
@@ -14,10 +16,145 @@ font-family: 'Raleway', sans-serif;
     /*color: var(--bleu);*/
 }
 
-/*------------ HEADER ---------------*/
-
-.checked{
-    color: blue;
+/*-------------Réglages générale--------------*/
+header,main,footer{
+    padding: 30px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
-/*-------------Hébergement à Marseille --------------*/
+li{
+    list-style-type: none;
+
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: 'Ralewaybold', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*------------ HEADER ---------------*/
+/*------------Navigation-------------*/
+
+nav{
+    overflow: hidden;
+    width: 100%;
+    opacity: 0.9;
+}
+
+header li {
+    float: right;
+    font-size: 1.2em;
+}
+header li a{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.logo{
+    float: left;
+}
+
+/*-------------Titre ---------------*/
+.header_title,h2,p{
+    margin: 5px;
+}
+
+/*----------- Filtres ----------------*/
+
+.header_filtres{
+    font-family: 'Ralewaybold', sans-serif;
+}
+
+.filtres_btn{
+    display: flex;
+    align-items: center;
+}
+.item{
+    padding: 20px;
+}
+
+.btn {
+    display: flex;
+    height: 50px;
+    padding: 0;
+    background: #009578;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #008168;
+}
+
+.btn:active {
+    background: #006e58;
+}
+
+.btn__text,
+.btn__icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+}
+
+.btb__icon {
+    border-radius: 50px;
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+
+/*------------ Main ---------------------------------*/
+/*------------ Hébergement à Marseille --------------*/
+
+.fa-star{
+    /*Pour les étoiles sous les cards*/
+    color: var(--bleuClair);
+}
+
+.checked{
+    /*Eoiles check*/
+    color: var(--bleu);
+}
+
+/*------------ Les plus populaires ------------------*/
+
+/*-------------- Activités à Marseille --------------*/
+
+/*-------------- Footer -----------------------------*/
+
+footer {
+    background-color: #d4d4d469;
+}
+
+footer li{
+    padding: 4px 0;
+}
+.footer_container{
+    display: flex;
+}
+.nos_hebergements{
+    padding: 0 15% ;
+}
