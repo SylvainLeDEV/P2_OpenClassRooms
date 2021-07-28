@@ -16,20 +16,8 @@ font-family: 'Raleway', sans-serif;
 
 /*------------ HEADER ---------------*/
 
-.logo_reservia{
-    height: 50px;
-    width: 100px;
+.checked{
+    color: blue;
 }
 
-navbar{
-    display: flex;
-
-}
-
-ul{
-    display: flex;
-}
-
-h2{
-
-}
+/*-------------Hébergement à Marseille --------------*/
