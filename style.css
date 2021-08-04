@@ -17,9 +17,20 @@ font-family: 'Ralewaybold', sans-serif;
 }
 
 /*-------------Réglages générale--------------*/
-header,main,footer{
-    padding: 30px;
+header{
+    padding: 60px 60px 10px 60px;
 }
+.research{
+    padding: 0 60px
+}
+main{
+    padding: 10px 60px;
+}
+
+footer{
+    padding: 40px 60px 60px 60px;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -37,11 +48,18 @@ ul{
 
 h2{
     font-family: 'Ralewaybold', sans-serif;
+}
 
+h3{
+    font-size: 1.2em;
 }
 
 a{
     text-decoration: none;
+}
+
+button{
+    padding: 0;
 }
 
 /*------------ HEADER ---------------*/
@@ -56,10 +74,12 @@ header li {
     float: right;
     font-size: 1.2em;
 }
-header li a{
+header li a:visited{
     text-decoration: none;
+    color: var(--bleu);
     display: block;
     text-align: center;
+
 
 }
 .onglet{
@@ -72,14 +92,66 @@ header li a{
 }
 
 /*-------------Titre ---------------*/
-.header_title,h2{
+.header_title h2{
     margin: 20px 0px 0px 0px;
+    font-size: 1.5em;
 }
-.header_title,p{
+.header_title p{
     margin: 0px 0px 20px 0px;
 }
 
-/*----------- Filtres ----------------*/
+/*------------- Recherche ----------*/
+
+#header_research{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    height: 45px;
+}
+
+#header_research span{
+    height:100%;
+    width: 50px;
+    background-color: var(--grisFond);
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header_research input[type="text"]{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0 15px  ;
+    border: transparent;
+    border-top: 1px solid var(--grisFond);
+    border-bottom: 1px solid var(--grisFond);
+}
+#header_research input[type="text"]:focus-visible{
+    outline: transparent;
+    background-color: var(--bleuClair);
+}
+#header_research button{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    height: 100%;
+    width: 110px;
+    text-align: center;
+    background-color: var(--bleu);
+    color: #fff;
+    border-radius: 0px 15px 15px 0px;
+    border-color: transparent;
+}
+#header_research button:active{
+    border-color: rgba(118, 118, 118, 0.40);
+    background-color: var(--bleuClair);
+    color: #0c0101c7;
+}
+
+/*----------- Filtres " BUTTON " ---*/
+
 
 .header_filtres{
     font-family: 'Ralewaybold', sans-serif;
@@ -88,59 +160,222 @@ header li a{
 .filtres_btn{
     display: flex;
     align-items: center;
-}
-.item{
-    padding: 20px;
+    margin: 25px 0;
 }
 
 .btn {
+    position: relative;
     display: flex;
     height: 50px;
-    padding: 0;
-    background: white;
-    border: 1px solid darkgray;
+    margin: 0 10px;
+    background: transparent;
+    border: 1.5px solid lightgray;
     outline: none;
     border-radius: 25px;
-    overflow: hidden;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
-}
-
-.btn:hover {
-    background: var(--bleu);
-}
-
-.btn:active {
-    background: var(--bleu);
-}
-
-.btn__text,
-.btn__icon {
-    display: inline-flex;
     align-items: center;
-    padding: 0 24px;
-    height: 100%;
-}
-.btn__text{
-    /*background: white;*/
-    /*color: black;*/
-    font-weight: bold;
+    justify-content: space-between;
 }
 
-.btb__icon,i {
-    background-color: var(--grisFond);
+.btn,
+.btn::after {
+    /* "-ms- "pour Microsoft (Internet Explorer)*/
+    -webkit-transition: all 0.3s;
+    /*Webkit (Chrome, Safari, Android...)*/
+    -moz-transition: all 0.3s;
+    /* Gecko (Mozilla)*/
+    -o-transition: all 0.3s;
+    /*Opera*/
+    transition: all 0.3s;
+}
+
+.btn::after {
+    background: var(--bleu);
+    border-radius: 25px;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    left: 12px;
+    top: 0;
+    width: 0px;
+}
+
+.btn:hover::after {
+    border-color: var(--bleu);
+    color: var(--bleu);
+    width: calc(100% - 12px);
+}
+
+.filtres_btn .btn__text{
+    margin: 0 10px;
+}
+
+.filtres_btn .btn__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bleuClair);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: -2px;
+}
+
+.filtres_btn .btn__icon i {
+    background-color: var(--bleuClair);
     color: var(--bleu);
     border-radius: 50px ;
-    font-size: 1.5em;
+    font-size: 1.1em;
+}
+
+/*--------Infos sur le nombre de logements trouvé ----*/
+
+#header_number_logements .fas{
+    color: var(--bleu);
+    border: 2px solid var(--grisFond);
+    border-radius: 50%;
+    font-weight: 600;
+    padding: 5px;
+}
+.fa-info:before{
+    padding: 5px;
 }
 
 
 
 /*------------ Main ---------------------------------*/
-/*------------ Hébergement à Marseille --------------*/
+/*------------ Hébergements à Marseille --------------*/
 
+#result_research{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.result_hebergements{
+    background-color: var(--grisFond);
+    border-radius: 25px 25px 25px 25px;
+    padding: 30px;
+    width: 60%;
+}
+
+.cards_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-area:
+            "a b c"
+            "d e f";
+}
+
+.cards_wrapper:nth-child(1){
+    grid-area: a;
+}
+.cards_wrapper:nth-child(2){
+    grid-area: b;
+}
+.cards_wrapper:nth-child(3){
+    grid-area: c;
+}
+.cards_wrapper:nth-child(4){
+    grid-area: d;
+}
+.cards_wrapper:nth-child(5){
+    grid-area: e;
+}
+.cards_wrapper:nth-child(6){
+    grid-area: f;
+}
+/*------------- Cards hébergements -------------------*/
+.cards_hebergements{
+    margin: 20px;
+    width: 85%;
+    padding: 0.4em;
+    background-color: #fff;
+    border-radius: 25px 25px 25px 25px ;
+    align-content: center;
+
+}
+.hebergements_img{
+    height: 120px;
+    border-radius: 20px 20px 0px 0px;
+    overflow: hidden;
+}
+
+.cards_hebergements img{
+    height: inherit;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cards_hebergements h3{
+    margin: 5px 0 10px 25px;
+}
+.cards_hebergements p,.star{
+    margin: 5px 25px;
+}
+/*---------------- Afficher plus --------------------*/
+
+
+.show-more {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+}
+.show-more:hover {
+    color: var(--bleu);
+}
+
+
+/*------------ Les plus populaires ------------------*/
+#result_popular{
+    background-color: var(--grisFond);
+    border-radius: 25px 25px 25px 25px;
+    padding: 30px;
+    width: 30%;
+}
+#result_popular h2{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px 20px 25px;
+}
+
+/*------------- Cards Populaires -------------------*/
+
+.cards_popular{
+    display: flex;
+    height: 180px;
+    width: 90%;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 25px 25px 25px 25px;
+    align-content: center;
+}
+
+.cards_popular img {
+    height: 170px;
+    width: 35%;
+    border-radius: 25px 0px 0px 25px;
+    margin: 5px;
+
+}
+
+.cards_popular h3{
+
+}
+
+.card_infos_populaires{
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------- Les étoiles ------------------------*/
 .fa-star{
     /*Pour les étoiles sous les cards*/
     color: var(--bleuClair);
@@ -150,8 +385,6 @@ header li a{
     /*Eoiles check*/
     color: var(--bleu);
 }
-
-/*------------ Les plus populaires ------------------*/
 
 /*-------------- Activités à Marseille --------------*/
 
