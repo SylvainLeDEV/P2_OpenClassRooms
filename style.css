@@ -119,8 +119,9 @@ header li a:visited {
     font-weight: bold;
 }
 
-.logo {
-    float: left;
+.logo img{
+    height: 60px;
+    width: 125px;
 }
 
 /*-------------Titre ---------------*/
@@ -719,9 +720,6 @@ footer li a {
         display: flex;
         flex-wrap: wrap;
     }
-}
-
-@media screen and (max-width: 768px) {
     .footer_container {
         display: flex;
         flex-direction: column;
@@ -732,28 +730,33 @@ footer li a {
     }
 }
 
-@media screen and (max-width: 425px) {
-    .wrapper{
-        display: grid;
-        grid-template-columns:1fr 1fr ;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-                "a b"
-                "c d";
+@media screen and (max-width: 576px) {
+
+    /*--- Nav ----------------------------------*/
+
+    .inner-30,.inner-70{
+        width: 100%;
     }
-    .logo:nth-child(1){
-        grid-area: a;
+
+    .onglets{
+        display: flex;
+        flex-wrap: wrap;
     }
     .onglet:nth-child(1){
-        grid-area: b;
+        order: 1;
 
     }
     .onglet:nth-child(2){
-        grid-area: c;
+        order: 3;
+
     }
     .onglet:nth-child(3){
-        grid-area: d;
+        order: 2;
+
     }
+
+
+
 
     /*--- Modification du button (Recherche) ---*/
     #header_research {
