@@ -18,28 +18,25 @@ font-family: 'Ralewaybold', sans-serif;
 }
 
 /*-------------Réglages générale--------------*/
+.main-container{
+    width: 1800px;
+    max-width: 100%;
+    margin: auto;
+}
 header {
-    padding: 0 60px 0 60px;
-    margin: 0 auto;
-    max-width: 1800px;
+
 }
 
 .research {
-    padding: 0 60px;
-    margin: 0 auto;
-    max-width: 1800px;
+
 }
 
 main {
-    padding: 10px 60px;
-    margin: 0 auto;
-    max-width: 1800px;
+
 }
 
 footer {
-    padding: 40px 60px 60px 60px;
-    margin: 0 auto;
-    max-width: 1800px;
+   padding-bottom: 20px;
 }
 
 body {
@@ -82,6 +79,20 @@ button {
 nav {
     overflow: hidden;
     margin: 0;
+}
+.wrapper-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.inner-30 {
+    flex: 0 0 auto;
+    width: 30%;
+}
+.inner-70{
+    flex: 0 0 auto;
+    width: 70%;
 }
 
 header li {
@@ -225,7 +236,7 @@ header li a:visited {
     content: '';
     position: absolute;
     z-index: -1;
-    height: 100%;
+    height: 99%;
     left: 12px;
     top: 0;
     width: 0px;
@@ -235,6 +246,9 @@ header li a:visited {
     border-color: var(--bleu);
     color: var(--bleu);
     width: calc(100% - 12px);
+}
+.btn:hover,.btn__text:hover{
+    color: white;
 }
 
 .filtres_btn .btn__text {
@@ -359,6 +373,8 @@ header li a:visited {
 
 .cards_hebergements h3 {
     margin: 5px 0 10px 15px;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .cards_hebergements p, .hebergements_star {
@@ -402,7 +418,6 @@ header li a:visited {
 
 .cards_popular {
     display: flex;
-    height: 180px;
     width: 90%;
     margin: 20px;
     background-color: #fff;
@@ -419,7 +434,7 @@ header li a:visited {
 }
 
 .popular_img {
-    height: 170px;
+    height: 160px;
     width: 40%;
     margin: 5px;
 }
@@ -441,6 +456,10 @@ header li a:visited {
 
 .card_infos h3 {
     margin: 22px 0 0 0;
+    font-size: 1.2em;
+}
+.popular_star{
+    padding-top: 15px ;
 }
 
 
@@ -458,7 +477,6 @@ header li a:visited {
 /*-------------- Activités à Marseille --------------*/
 
 #activity {
-
     padding: 20px 0;
 }
 
@@ -536,11 +554,11 @@ header li a:visited {
     width: 100%;
 }
 
-
 .activity_infos {
     margin-left: 20px;
     overflow: hidden;
 }
+
 
 
 /*-------------- Footer -----------------------------*/
@@ -551,6 +569,7 @@ footer {
 
 footer li {
     padding: 4px 0;
+    margin-bottom: .5em;
 }
 
 footer li a {
@@ -714,7 +733,7 @@ footer li a {
 }
 
 @media screen and (max-width: 425px) {
-    ul{
+    .wrapper{
         display: grid;
         grid-template-columns:1fr 1fr ;
         grid-template-rows: 1fr 1fr;
@@ -725,21 +744,21 @@ footer li a {
     .logo:nth-child(1){
         grid-area: a;
     }
-    .onglets:nth-child(1){
+    .onglet:nth-child(1){
         grid-area: b;
 
     }
-    .onglets:nth-child(2){
+    .onglet:nth-child(2){
         grid-area: c;
     }
-    .onglets:nth-child(3){
+    .onglet:nth-child(3){
         grid-area: d;
     }
 
     /*--- Modification du button (Recherche) ---*/
     #header_research {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     #header_research button {
@@ -823,7 +842,7 @@ footer li a {
 
     .result_hebergements h2 {
         margin: 0 auto;
-        padding: 25px 0 0 15px;
+        margin: 25px 0 0 15px;
     }
 
     #result_popular {
