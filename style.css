@@ -193,7 +193,7 @@ header li a:visited {
     max-width: max-content;
     margin: 0 10px;
     background: transparent;
-    border: 1.5px solid lightgray;
+    border: 1.5px solid var(--grisFond);
     outline: none;
     border-radius: 25px;
     font-family: 'Raleway', sans-serif;
@@ -261,17 +261,24 @@ header li a:visited {
 
 /*--------Infos sur le nombre de logements trouvé ----*/
 
+.container-info{
+    display: flex;
+    align-items: center;
+}
 #header_number_logements .fas {
+    margin-right: 5px;
     color: var(--bleu);
     border: 2px solid var(--grisFond);
     border-radius: 50%;
     font-weight: 600;
     padding: 5px;
+
 }
 
 .fa-info:before {
     padding: 5px;
 }
+
 
 
 /*------------ Main ---------------------------------*/
@@ -287,7 +294,7 @@ header li a:visited {
     background-color: var(--grisFond);
     border-radius: 25px 25px 25px 25px;
     padding: 30px;
-    width: 60%;
+    width: 65%;
 }
 
 .result_hebergements h2 {
@@ -391,7 +398,7 @@ header li a:visited {
     background-color: var(--grisFond);
     border-radius: 25px 25px 25px 25px;
     padding: 30px;
-    width: 30%;
+    width: 31%;
 }
 
 #result_popular h2 {
@@ -590,7 +597,10 @@ footer li a {
     }
 
     .result_hebergements {
-        width: 58%;
+        width: 61%;
+    }
+    #result_popular{
+        width: 34%;
     }
 
     .activity_infos {
@@ -719,31 +729,53 @@ footer li a {
 
     /*--- Nav ----------------------------------*/
 
-
     .onglets{
         display: flex;
         flex-wrap: wrap;
     }
+    /* Logo */
     .onglets li:nth-child(1){
         order: 1;
         flex-basis: 50%;
-
+        padding-left: 20px;
+        border-top: none;
     }
-    .onglets li:nth-child(2){
-        order: 2;
+    /* Hebergements */
+    .onglets li:nth-child(2) {
+        order: 3;
         flex-basis: 50%;
-
+        display: flex;
+        justify-content: space-around;
     }
+    /* Activités */
     .onglets li:nth-child(3){
         order: 4;
         flex-basis: 50%;
-        padding-left: 10px;
+        display: flex;
+        justify-content: space-around;
     }
+    /*-S'inscrire -*/
     .onglets li:nth-child(4){
-        order: 3;
+        order: 2;
         flex-basis: 50%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
     }
-
+    .onglets li:nth-child(2),.onglets li:nth-child(3){
+        border-bottom: 2px solid var(--grisFond);
+    }
+    .onglets li:nth-child(2):hover,
+    .onglets li:nth-child(3):hover {
+        border-top: none;
+        border-bottom: 2px solid var(--bleu);
+    }
+    .onglets li {
+        border-top: transparent!important;
+    }
+    header{
+        padding: 0;
+    }
 
 
 
