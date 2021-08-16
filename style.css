@@ -8,6 +8,7 @@ font-family: 'Ralewaybold', sans-serif;
 */
 
 /*---------- Variable de couleurs ------*/
+
 :root {
     --bleu: #0065FC;
     --bleuClair: #DEEBFF;
@@ -18,21 +19,13 @@ font-family: 'Ralewaybold', sans-serif;
 }
 
 /*-------------Réglages générale--------------*/
+*{
+    box-sizing: border-box;
+}
 .main-container{
     width: 1800px;
     max-width: 100%;
     margin: auto;
-}
-header {
-
-}
-
-.research {
-
-}
-
-main {
-
 }
 
 footer {
@@ -80,23 +73,14 @@ nav {
     overflow: hidden;
     margin: 0;
 }
-.wrapper-row {
+.onglets {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
 }
-.inner-30 {
-    flex: 0 0 auto;
-    width: 30%;
+.onglets li:nth-child(1){
+    flex-basis: 100%;
 }
-.inner-70{
-    flex: 0 0 auto;
-    width: 70%;
-}
-
 header li {
-    float: right;
     font-size: 1.2em;
 }
 
@@ -106,12 +90,13 @@ header li a:visited {
     text-align: center;
 }
 
-.onglets li {
+.onglets li:nth-child(n+2) {
     padding: 20px 3%;
     color: var(--bleu);
+    border-top: 2px solid transparent ;
 }
 
-.onglets li:hover {
+.onglets li:nth-child(n+2):hover {
     border-top: 2px solid var(--bleu);
 }
 
@@ -119,8 +104,9 @@ header li a:visited {
     font-weight: bold;
 }
 
-.logo {
-    float: left;
+.onglets img{
+    height: 60px;
+    width: 125px;
 }
 
 /*-------------Titre ---------------*/
@@ -207,7 +193,7 @@ header li a:visited {
     max-width: max-content;
     margin: 0 10px;
     background: transparent;
-    border: 1.5px solid lightgray;
+    border: 1.5px solid var(--grisFond);
     outline: none;
     border-radius: 25px;
     font-family: 'Raleway', sans-serif;
@@ -275,17 +261,24 @@ header li a:visited {
 
 /*--------Infos sur le nombre de logements trouvé ----*/
 
+.container-info{
+    display: flex;
+    align-items: center;
+}
 #header_number_logements .fas {
+    margin-right: 5px;
     color: var(--bleu);
     border: 2px solid var(--grisFond);
     border-radius: 50%;
     font-weight: 600;
     padding: 5px;
+
 }
 
 .fa-info:before {
     padding: 5px;
 }
+
 
 
 /*------------ Main ---------------------------------*/
@@ -301,7 +294,7 @@ header li a:visited {
     background-color: var(--grisFond);
     border-radius: 25px 25px 25px 25px;
     padding: 30px;
-    width: 60%;
+    width: 65%;
 }
 
 .result_hebergements h2 {
@@ -405,7 +398,7 @@ header li a:visited {
     background-color: var(--grisFond);
     border-radius: 25px 25px 25px 25px;
     padding: 30px;
-    width: 30%;
+    width: 31%;
 }
 
 #result_popular h2 {
@@ -604,7 +597,10 @@ footer li a {
     }
 
     .result_hebergements {
-        width: 58%;
+        width: 61%;
+    }
+    #result_popular{
+        width: 34%;
     }
 
     .activity_infos {
@@ -719,9 +715,6 @@ footer li a {
         display: flex;
         flex-wrap: wrap;
     }
-}
-
-@media screen and (max-width: 768px) {
     .footer_container {
         display: flex;
         flex-direction: column;
@@ -732,28 +725,59 @@ footer li a {
     }
 }
 
-@media screen and (max-width: 425px) {
-    .wrapper{
-        display: grid;
-        grid-template-columns:1fr 1fr ;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-                "a b"
-                "c d";
-    }
-    .logo:nth-child(1){
-        grid-area: a;
-    }
-    .onglet:nth-child(1){
-        grid-area: b;
+@media screen and (max-width: 576px) {
 
+    /*--- Nav ----------------------------------*/
+
+    .onglets{
+        display: flex;
+        flex-wrap: wrap;
     }
-    .onglet:nth-child(2){
-        grid-area: c;
+    /* Logo */
+    .onglets li:nth-child(1){
+        order: 1;
+        flex-basis: 50%;
+        padding-left: 20px;
+        border-top: none;
     }
-    .onglet:nth-child(3){
-        grid-area: d;
+    /* Hebergements */
+    .onglets li:nth-child(2) {
+        order: 3;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: space-around;
     }
+    /* Activités */
+    .onglets li:nth-child(3){
+        order: 4;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: space-around;
+    }
+    /*-S'inscrire -*/
+    .onglets li:nth-child(4){
+        order: 2;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+    .onglets li:nth-child(2),.onglets li:nth-child(3){
+        border-bottom: 2px solid var(--grisFond);
+    }
+    .onglets li:nth-child(2):hover,
+    .onglets li:nth-child(3):hover {
+        border-top: none;
+        border-bottom: 2px solid var(--bleu);
+    }
+    .onglets li {
+        border-top: transparent!important;
+    }
+    header{
+        padding: 0;
+    }
+
+
 
     /*--- Modification du button (Recherche) ---*/
     #header_research {
