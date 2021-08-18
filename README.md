@@ -1,7 +1,7 @@
 ![Logo Réservia](/src/Images/logo/Reservia@3x.png)
 # Reservia
 Création d'une interface web à partir d'une maquette :
-![Maquette Web](/src/Images/maquette/Desktop.png)
+![Maquette Web](/src/Images/maquette/Desktop - 1.png)
 Tout le projet doit ce faire uniquement en HTML et CSS sans aucun framework, avec certaine fonctionnalité et contraintes techniques.
 ## Fonctionnalités
 
