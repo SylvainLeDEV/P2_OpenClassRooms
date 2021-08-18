@@ -21,10 +21,11 @@ font-family: 'Ralewaybold', sans-serif;
 /*-------------Réglages générale--------------*/
 *{
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 .main-container{
     width: 1800px;
-    max-width: 100%;
+    max-width: calc(100% - 3rem);
     margin: auto;
 }
 
@@ -36,7 +37,6 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
 }
 
 li {
@@ -122,7 +122,6 @@ header li a {
 /*------------- Recherche ----------*/
 
 #header_research {
-    font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: flex-start;
     height: 45px;
@@ -141,7 +140,6 @@ header li a {
 }
 
 #header_research input[type="text"] {
-    font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 1.1em;
     padding: 0 15px;
@@ -156,7 +154,6 @@ header li a {
 }
 
 #header_research button {
-    font-family: 'Raleway', sans-serif;
     font-weight: bold;
     height: 100%;
     width: 110px;
@@ -176,10 +173,6 @@ header li a {
 /*----------- Filtres " BUTTON " ---*/
 
 
-.header_filtres {
-    font-family: 'Ralewaybold', sans-serif;
-}
-
 .filtres_btn {
     display: flex;
     align-items: center;
@@ -196,7 +189,6 @@ header li a {
     border: 1.5px solid var(--grisFond);
     outline: none;
     border-radius: 25px;
-    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -395,6 +387,9 @@ header li a {
 
 /*------------ Les plus populaires ------------------*/
 #result_popular {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: var(--grisFond);
     border-radius: 25px 25px 25px 25px;
     padding: 30px;
@@ -409,10 +404,9 @@ header li a {
 
 /*------------- Cards Populaires -------------------*/
 
-.cards_popular a {
+.cards_popular {
     display: flex;
-    width: 90%;
-    margin: 20px;
+    margin: 15px;
     background-color: #fff;
     border-radius: 25px 25px 25px 25px;
     align-content: center;
@@ -580,17 +574,6 @@ footer li a {
 /*-------------- Média Queries -----------------------*/
 
 @media screen and (max-width: 1487px) {
-    header {
-        padding: 0 20px;
-    }
-
-    .research {
-        padding: 0 20px;
-    }
-
-    main {
-        padding: 5px 20px;
-    }
 
     footer {
         padding: 25px 20px 20px 20px;
@@ -727,6 +710,12 @@ footer li a {
 
 @media screen and (max-width: 576px) {
 
+    .main-container{
+        max-width: 100%;
+    }
+    .research > .main-container{
+        max-width: 90%;
+    }
     /*--- Nav ----------------------------------*/
 
     .onglets{
@@ -790,6 +779,7 @@ footer li a {
         min-width: 50px;
         border-radius: 15px 15px 15px 15px;
     }
+
 
     /* Changement de du button recherche avec un font awesome */
     .icon {
@@ -878,11 +868,6 @@ footer li a {
         margin: 20px;
     }
 
-    .cards_popular {
-        height: 160px;
-        margin: 15px;
-    }
-
     .popular_img {
         height: 150px;
     }
@@ -915,4 +900,3 @@ footer li a {
     }
 
 }
-
