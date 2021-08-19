@@ -622,6 +622,7 @@ footer li a {
     .cards_wrapper {
         display: grid;
         grid-template-columns:repeat(2 , 1fr);
+        justify-items: center;
     }
     #result_popular{
         justify-content: space-between;
