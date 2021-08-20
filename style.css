@@ -358,6 +358,9 @@ header li a {
 .cards_hebergements p, .hebergements_star {
     margin: 5px 15px;
 }
+.cards_infos_hebergements > p > span{
+    font-weight: bold;
+}
 
 /*---------------- Afficher plus --------------------*/
 
@@ -440,6 +443,9 @@ header li a {
 }
 .popular_star{
     padding-top: 15px ;
+}
+.card_infos > p > span{
+    font-weight: bold;
 }
 
 
@@ -797,14 +803,10 @@ footer li a {
         display: block;
         line-height: initial;
     }
-    #header_research input[type="text"]{
-        font-size: 15px;
-    }
 
     /*---- Filtres --------------------------------*/
     .filtres_btn{
         display: grid;
-        flex-wrap: nowrap;
         grid-template-columns:1fr 1fr ;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
