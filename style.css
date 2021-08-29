@@ -88,7 +88,6 @@ header li a {
     color: var(--bleu);
     border-top: 2px solid transparent ;
 }
-
 .onglets li:nth-child(n+2):hover {
     border-top: 2px solid var(--bleu);
 }
@@ -189,18 +188,6 @@ header li a {
     justify-content: space-between;
 }
 
-.btn,
-.btn::after {
-    /* "-ms- "pour Microsoft (Internet Explorer)*/
-    -webkit-transition: all 0.3s;
-    /*Webkit (Chrome, Safari, Android...)*/
-    -moz-transition: all 0.3s;
-    /* Gecko (Mozilla)*/
-    -o-transition: all 0.3s;
-    /*Opera*/
-    transition: all 0.3s;
-}
-
 .btn::after {
     background: var(--bleu);
     border-radius: 25px;
@@ -211,6 +198,8 @@ header li a {
     left: 12px;
     top: 0;
     width: 0px;
+    
+    transition: all 0.3s;
 }
 
 .btn:hover::after {
